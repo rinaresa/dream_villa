@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCM.41.008.177.23</title>
+    <script src="script/aframe.min.js"></script>
+    <script src="script/ada-water.js"></script>
+
+</head>
+<body>
+    <a-scene>
+        <a-asset>
+            <img src="texture/background-blue-sky-with-white-clouds_1048-2877.jpg" alt="" id="sky">
+            <img src="texture/texture-grass-field_1232-251.jpg" id="grass" alt="">
+            <img src="texture/sky1.jpg" alt="sky1">
+            <img src="texture/OIP.jpeg" id="skyy" alt="">
+            <img src="texture/2k_stars_milky_way.jpg" id="night" alt="">
+        </a-asset>
+           
+  
+
+
+        <a-plane material="color:ffffff;
+                            src:#grass;
+                            repeat:500 500"
+                rotation="-90 0 0"
+                scale="1000 1000 1">
+
+        </a-plane>
+        
+        <a-sky  src="#night"></a-sky>
+
+        <a-asset-item
+        src="summervilla/scene.gltf"
+        id="summervilla"
+        ></a-asset-item>
+
+        <a-asset-item
+        src="My cat/scene.gltf"
+        id="cat"
+        ></a-asset-item>
+
+        <a-entity
+  gltf-model="#cat"
+  position="1 -1.5 7"
+  scale="0.5 0.5 0.5"
+></a-entity>
+
+      
+
+        <a-entity
+        gltf-model="#summervilla"
+        position="1 -1.5 8"
+        rotation="0 90 0"
+        ></a-entity>
+
+        <a-entity-item
+        src="script/swimming_pool_343 (1)/scene.gltf"
+        id="pool"
+        ></a-entity-item>
+
+        <a-entity
+        gltf-model= #pool
+        position="-29 0.15 20"
+        scale="0.005 0.005 0.005"
+      ></a-entity>
+
+
+
+
+        <a-camera
+        position="-4 3 49"
+        ></a-camera>
+
+    <!--Water-->
+    <a-water
+    opacity="12"
+    side="double"
+    width="4"       
+    length="6"
+    height="20"
+    base-color="#5785DA"
+    foam-color="sea blue"
+    repeat="4"
+    voronoi-points="1"
+    rotation="90 90 0"
+    position="-31 0.88 19.2"
+  >
+  </a-water>
+   
+   <a-box length="6" width="4" height="20" side="double" position="-14 0.2 18"></a-box>
+   
+    </a-scene>
+    
+</body>
+</html>
